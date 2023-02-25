@@ -1,0 +1,1 @@
+export const str = '这是str.js中的字符串';

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode:'development', // 开发环境
-  entry:path.resolve(__dirname,'./src/main.js'),
+  entry:path.resolve(__dirname,'./src/main.ts'),
   output:{
     path:path.resolve(__dirname,'dist'),
     filename:'js/[name].js'
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test:/\.css$/,
-        use:['style-loader', 'css-loader']
+        use:['style-loader', 'css-loader', 'postcss-loader']
       },
       {
         test:/\.tsx?$/, // ts或者tsx
@@ -37,7 +37,12 @@ module.exports = {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.(png|jpe?g|gif|webp)(\?.*)?$/,
+        type: 'asset',
+        generator: { filename: 'img/[contenthash:8][ext][query]' },
+      },
     ]
   },
   plugins:[
@@ -58,6 +63,7 @@ module.exports = {
   })],
   devServer:{
     port:8080,
+    historyApiFallback:true, // 支持history 模式
     static:{
       directory:path.join(__dirname,'public'),
     }

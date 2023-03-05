@@ -1,22 +1,26 @@
 <template>
   <div>
     <h1>{{ msg }}</h1>
+    <button @click="user.add()">{{ user.count }}</button>
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import { ref } from 'vue';
-export default ({
-  setup(){
-    const msg = ref(1);
+<script lang="ts" setup>
+import { ref, Ref } from 'vue';
+import { useUserStore } from '@/store/index';
+// export default ({
+//   setup(){
+    const msg:Ref<number> = ref(1);
 
     setInterval(()=>{
       msg.value++;
     }, 1000)
 
-    return { msg };
-  }
-})
+    const user = useUserStore();
+    // return { msg };
+//   }
+// })
 </script>
 
 <style scoped>

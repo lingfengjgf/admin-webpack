@@ -8,6 +8,7 @@
       "moduleResolution": "node", // 用于选择模块解析策略，有'node'和'classic'两种类型'
       "experimentalDecorators": true, // 模块名到基于 baseUrl的路径映射的列表。
       "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+      "noImplicitAny": false, // true:不允许隐式的any类型
       "esModuleInterop": true, // 支持在 CommonJs 模块下使用 import d from 'cjs', 解决TypeScript 对于 CommonJs/AMD/UMD 模块与 ES6 模块处理方式相同导致的问题
       "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
       "sourceMap": true, // 生成相应的 .map文件。

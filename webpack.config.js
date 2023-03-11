@@ -46,8 +46,8 @@ module.exports = {
     ]
   },
   plugins:[
-    new CleanWebpackPlugin(), 
     new VueLoaderPlugin(), 
+    new CleanWebpackPlugin(), 
     new HtmlWebpackPlugin({
     templateContent:`<!DOCTYPE html>
     <html>

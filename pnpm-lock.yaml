@@ -11,6 +11,7 @@ specifiers:
   postcss: ^8.4.21
   postcss-loader: ^7.0.2
   postcss-preset-env: ^8.0.1
+  speed-measure-webpack-plugin: ^1.5.0
   style-loader: ^3.3.1
   tailwindcss: ^3.2.7
   ts-loader: ^9.4.2
@@ -39,6 +40,7 @@ devDependencies:
   postcss: 8.4.21
   postcss-loader: 7.0.2_6jdsrmfenkuhhw3gx4zvjlznce
   postcss-preset-env: 8.0.1_postcss@8.4.21
+  speed-measure-webpack-plugin: 1.5.0_webpack@5.75.0
   style-loader: 3.3.1_webpack@5.75.0
   tailwindcss: 3.2.7_postcss@8.4.21
   ts-loader: 9.4.2_hhrrucqyg4eysmfpujvov2ym5u
@@ -3496,6 +3498,16 @@ packages:
       spdy-transport: 3.0.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /speed-measure-webpack-plugin/1.5.0_webpack@5.75.0:
+    resolution: {integrity: sha512-Re0wX5CtM6gW7bZA64ONOfEPEhwbiSF/vz6e2GvadjuaPrQcHTQdRGsD8+BE7iUOysXH8tIenkPCQBEcspXsNg==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      webpack: ^1 || ^2 || ^3 || ^4 || ^5
+    dependencies:
+      chalk: 4.1.2
+      webpack: 5.75.0_webpack-cli@5.0.1
     dev: true
 
   /statuses/1.5.0:

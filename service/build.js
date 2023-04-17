@@ -12,6 +12,10 @@ const speedMeasurePlugin = require("./config/speedMeasure");
 
 // require("./config/noParse")(base);
 
+// require("./config/sourcemap")(base);
+
+require("./config/quickMinify")(base);
+
 base.mode = "production";
 
 module.exports = base;

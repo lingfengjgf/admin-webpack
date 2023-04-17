@@ -13,5 +13,6 @@ base = cache(base);
 base = lazyCompilation(base);
 
 base.mode = "development";
+require("./config/devOptimization")(base);
 
 module.exports = base;

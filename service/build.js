@@ -16,6 +16,8 @@ const speedMeasurePlugin = require("./config/speedMeasure");
 
 require("./config/quickMinify")(base);
 
+require("./config/splitChunk")(base);
+
 base.mode = "production";
 
 module.exports = base;

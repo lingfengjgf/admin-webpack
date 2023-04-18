@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --progress --config ./service/dev.js",
-    "build": "webpack --config ./service/build.js"
+    "build": "webpack --config ./service/build.js",
+    "test": "node ./server/index.js"
   },
   "keywords": [],
   "author": "",
@@ -33,10 +34,14 @@
   "dependencies": {
     "@vueuse/core": "^9.13.0",
     "@vueuse/head": "^1.1.19",
+    "connect-history-api-fallback": "^2.0.0",
     "echarts": "^5.4.1",
+    "ecstatic": "^4.1.4",
+    "express": "^4.18.2",
     "pinia": "^2.0.32",
     "vue": "^3.2.47",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "webpack-bundle-analyzer": "^4.8.0"
   }
 }
